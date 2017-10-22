@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: faq
+label: 'Question / Answer'
+icon_uuid: null
+description: 'A question/answer combination.'
+behavior_plugins: {  }

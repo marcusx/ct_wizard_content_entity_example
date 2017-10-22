@@ -1,0 +1,27 @@
+entity.my_entity.wizard:
+  path: '/my_entity/wizard/{my_entity_type}'
+  defaults:
+    _entity_wizard: 'my_entity.add_simple'
+    _title: 'Simple My Entity Add Wizard'
+    tempstore_id: 'ct_wizard_content_entity_example.my_entity'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    parameters:
+      my_entity_type:
+        type: entity:my_entity_type
+    _admin_route: TRUE
+
+entity.my_entity.add_simple_step_form:
+  path: '/my_entity/wizard/{my_entity_type}/{step}'
+  defaults:
+    _entity_wizard: 'my_entity.add_simple'
+    _title: 'Simple My Entity Add Wizard Step'
+    tempstore_id: 'ct_wizard_content_entity_example.my_entity'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    parameters:
+      my_entity_type:
+        type: entity:my_entity_type
+    _admin_route: TRUE

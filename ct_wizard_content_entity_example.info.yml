@@ -1,0 +1,7 @@
+name: Ctools Wizard Content Entity Example
+type: module
+description: Example of building a ctools form wizard with entity edit forms.
+core: 8.x
+package: Example
+dependencies:
+  - paragraphs

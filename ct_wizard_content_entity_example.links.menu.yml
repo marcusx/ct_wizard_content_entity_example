@@ -1,0 +1,18 @@
+
+# My entity menu items definition
+entity.my_entity.collection:
+  title: 'My entity list'
+  route_name: entity.my_entity.collection
+  description: 'List My entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# My entity type menu items definition
+entity.my_entity_type.collection:
+  title: 'My entity type'
+  route_name: entity.my_entity_type.collection
+  description: 'List My entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

@@ -1,0 +1,22 @@
+add my entity entities:
+  title: 'Create new My entity entities'
+
+administer my entity entities:
+  title: 'Administer My entity entities'
+  description: 'Allow to access the administration form to configure My entity entities.'
+  restrict access: true
+
+delete my entity entities:
+  title: 'Delete My entity entities'
+
+edit my entity entities:
+  title: 'Edit My entity entities'
+
+access my entity overview:
+  title: 'Access the My entity overview page'
+
+view published my entity entities:
+  title: 'View published My entity entities'
+
+view unpublished my entity entities:
+  title: 'View unpublished My entity entities'

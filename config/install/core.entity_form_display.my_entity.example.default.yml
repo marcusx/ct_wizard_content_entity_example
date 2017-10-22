@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ct_wizard_content_entity_example.my_entity_type.example
+    - field.field.my_entity.example.field_ref_faq
+  module:
+    - paragraphs
+id: my_entity.example.default
+targetEntityType: my_entity
+bundle: example
+mode: default
+content:
+  field_ref_faq:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

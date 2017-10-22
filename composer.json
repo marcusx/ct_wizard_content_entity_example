@@ -1,0 +1,14 @@
+{
+  "name": "drupal/ct_wizard_content_entity_example",
+  "type": "drupal-module",
+  "description": "Example of building a ctools form wizard with entity edit forms.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/ct_wizard_content_entity_example",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/ct_wizard_content_entity_example",
+    "source": "http://cgit.drupalcode.org/ct_wizard_content_entity_example"
+  },
+  "require": { }
+}

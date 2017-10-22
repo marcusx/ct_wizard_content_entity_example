@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ct_wizard_content_entity_example.my_entity_type.example
+    - field.field.my_entity.example.field_ref_faq
+  module:
+    - entity_reference_revisions
+    - user
+id: my_entity.example.default
+targetEntityType: my_entity
+bundle: example
+mode: default
+content:
+  field_ref_faq:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

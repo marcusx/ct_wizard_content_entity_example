@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - ct_wizard_content_entity_example.my_entity_type.example
+    - field.storage.my_entity.field_ref_faq
+    - paragraphs.paragraphs_type.faq
+  module:
+    - entity_reference_revisions
+id: my_entity.example.field_ref_faq
+field_name: field_ref_faq
+entity_type: my_entity
+bundle: example
+label: FAQ
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      faq: faq
+    target_bundles_drag_drop:
+      faq:
+        enabled: true
+        weight: 3
+      faq_question:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

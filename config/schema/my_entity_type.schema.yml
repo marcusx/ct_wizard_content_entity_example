@@ -1,0 +1,12 @@
+ct_wizard_content_entity_example.my_entity_type.*:
+  type: config_entity
+  label: 'My entity type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

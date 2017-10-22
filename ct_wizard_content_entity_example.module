@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains ct_wizard_content_entity_example.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ct_wizard_content_entity_example_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ct_wizard_content_entity_example module.
+    case 'help.page.ct_wizard_content_entity_example':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Example of building a ctools form wizard with entity edit forms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function ct_wizard_content_entity_example_theme() {
+  $theme = [];
+  $theme['my_entity'] = [
+    'render element' => 'elements',
+    'file' => 'my_entity.page.inc',
+    'template' => 'my_entity',
+  ];
+  $theme['my_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'my_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function ct_wizard_content_entity_example_theme_suggestions_my_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#my_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'my_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'my_entity__' . $entity->bundle();
+  $suggestions[] = 'my_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'my_entity__' . $entity->id();
+  $suggestions[] = 'my_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
